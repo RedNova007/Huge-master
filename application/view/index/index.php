@@ -7,7 +7,14 @@
 
         <h3>movies</h3>
         <p>
-            this is index
+        	<?php if (Session::userIsLoggedIn()) {
+        		echo "Welcome to my movie review/info website.";
+        	}
+        		else {
+        			echo "Hello this is a movie review/info website. If you want to see our movie assortment please log in or register.";
+        		};
+        	?>
+
         </p>
     </div>
 </div>

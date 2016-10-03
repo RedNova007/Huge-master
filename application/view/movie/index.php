@@ -14,13 +14,22 @@
         <!-- echo out the system feedback (error and success messages) -->
         <?php $this->renderFeedbackMessages(); ?>
 
-        <h3>movies</h3>
+        <h2>movies</h2><br>
         <p>
-            this is movie
+            <h3>New Movies:</h3>
         </p>
-       		<a href="top10"><h3>top 10 </h3></a>
+           <table>
+            <tbody>
+           <?php foreach ($this->movies as $movie) { ?>
+              <td><a href=<?= Config::get('URL') . 'movie/movieindex/' . $movie->movie_id; ?>"><img HEIGHT="200" WIDTH="140" src="<?= $movie->movie_imgUrl; ?>"></td>
+           <?php } ?>
+            </tbody>
+        </table>
+        <br>
+       		<a href="TopRated"><h2>Top Rated Movies</h2></a>
 
-
+           
        		
     </div>
-</div>
+</div> 
+
