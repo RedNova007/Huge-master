@@ -5,8 +5,6 @@ class WatchlistController extends Controller
 {
         
         
-
-        
         public function index()
         {
         $this->View->render('watchlist/index', array(
@@ -16,7 +14,7 @@ class WatchlistController extends Controller
 
         public function Add()
         {
-        WatchlistModel::Addmovie(Request::post('movie_id'));
+        WatchlistModel::Addmovie(Request::post('movie_id'), Request::post('movie_title'), Request::post('movie_imgUrl'));
         Redirect::to('watchlist/index');
         }
 

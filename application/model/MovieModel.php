@@ -3,12 +3,17 @@
 class MovieModel
 {
 
+
+
+
   public static function getallmovies_toprated() 
   {
 
+    $search = Request::post('search');
+    
   	 $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "SELECT movie_id, movie_title, movie_year, movie_genre, movie_rate, movie_rank, movie_runtime, movie_summary, movie_imgUrl FROM movies ORDER BY movie_rank  ";
+        $sql = "SELECT movie_id, movie_title, movie_year, movie_genre, movie_rate, movie_rank, movie_runtime, movie_summary, movie_imgUrl FROM movies WHERE movie_title like '%$search%' ORDER BY movie_rank  ";
         $query = $database->prepare($sql);
         $query->execute();
 
@@ -30,7 +35,7 @@ class MovieModel
             $all_movie_list [$movie->movie_id]->movie_imgUrl = $movie->movie_imgUrl;
 
         }
-
+      
         return $all_movie_list;
   }
 

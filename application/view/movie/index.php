@@ -1,15 +1,21 @@
 <div class="container">
     <h1>Movie</h1>
 
-	<?php if (Session::get("user_account_type") == 7) : ?>
-            		 <?php if (View::checkForActiveController($filename, "admin")) {
-                		echo ' class="active" ';
-        		} ?> 
-           			 <a class="navigation right" href="../movie/addmovie"><h2>Add a Movie</h2></a>
-            		
-           		<?php endif; ?>
-        
+    <?php if (Session::get("user_account_type") == 7) : ?>
+    <?php if (View::checkForActiveController($filename, "admin")) {
+    echo ' class="active" ';
+    } ?> 
+    <a class="navigation right" href="../movie/addmovie"><h2>Add a Movie</h2></a>
+
+    <?php endif; ?>
+    
+    <form class="search-box" method="post" action="<?php echo Config::get('URL');?>movie/toprated">
+    <label></label><input type="text" name="search" />
+    <input type="submit" value='Search' autocomplete="off" />
+    </form>
     <div class="box">
+
+
 
         <!-- echo out the system feedback (error and success messages) -->
         <?php $this->renderFeedbackMessages(); ?>

@@ -14,10 +14,14 @@
     public function toprated()
     {
     $this->View->render('movie/TopRated', array(
-    'movies' => MovieModel::getallmovies_toprated()
+    'movies' => MovieModel::getallmovies_toprated(Request::post('search'))
     ));		
     }
-
+    
+    public function search()
+    {
+     
+    }
     public function movieindex($movie_id)
     {
     if (isset($movie_id)) {

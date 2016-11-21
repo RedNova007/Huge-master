@@ -20,7 +20,7 @@
                 <label>Runtime: </label><input type="text" name="movie_runtime" />
                 <label>Summary: </label><textarea rows="10" cols="100" type="text" name="movie_summary"> </textarea><br><br>
                 <label>img Link: </label><input type="text" name="movie_imgUrl" />
-                <input type="submit" value='save' autocomplete="OFF" />
+                <input type="submit" value='save' autocomplete="off" />
             </form>
         </p>
     </div>

@@ -9,6 +9,8 @@
 <?php if ($this->movies) { ?>
         <form class="navigation right" method="post" action="<?php echo Config::get('URL');?>watchlist/Add">
             <label></label><input type="hidden" name="movie_id" value="<?= $this->movies->movie_id; ?>"  />
+            <label></label><input type="hidden" name="movie_title" value="<?= $this->movies->movie_title; ?>"  />
+            <label></label><input type="hidden" name="movie_imgUrl" value="<?= $this->movies->movie_imgUrl; ?>"  />
             <input type="submit" value='Add to watchlist'  autocomplete="off" />
         </form>
 

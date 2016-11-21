@@ -26,3 +26,33 @@
 This is an area that's only visible for logged in users. Try to log out, an go to /dashboard/ again. You'll
             be redirected to /index/ as you are not logged in. You can protect a whole section in your app within the
             according controller by placing <i>Auth::handleLogin();</i> into the constructor.
+
+
+
+
+
+
+                <form  class="navigation left" method="post" action="<?php echo Config::get('URL');?>movie/toprated">
+    <input type="checkbox" name="Search" value="Action">Action<br>
+    <input type="checkbox" name="Search" value="Adventure">Adventure<br>
+    <input type="checkbox" name="Search" value="Animation">Animation<br>
+    <input type="checkbox" name="Search" value="biography">Biography<br>
+    <input type="checkbox" name="Search" value="Comedy">Comedy<br>
+    <input type="checkbox" name="Search" value="Crime">Crime<br>
+    <input type="checkbox" name="Search" value="Drama">Drama<br>
+    <input type="checkbox" name="Search" value="Family">Family<br>
+    <input type="checkbox" name="Search" value="Fantasy">Fantesy<br>
+    <input type="checkbox" name="Search" value="Film-Noir">Film-Noir<br>
+    <input type="checkbox" name="Search" value="History">History<br>
+    <input type="checkbox" name="movie_genre" value="Horror">Horror<br>
+    <input type="checkbox" name="movie_genre" value="Music">Music<br>
+    <input type="checkbox" name="movie_genre" value="Musical">musical<br>
+    <input type="checkbox" name="movie_genre" value="Mystery">Mystery<br>
+    <input type="checkbox" name="movie_genre" value="Romance">Romance<br>
+    <input type="checkbox" name="movie_genre" value="Sci-Fi">Sci-Fi<br>
+    <input type="checkbox" name="movie_genre" value="Sport">Sport<br>
+    <input type="checkbox" name="movie_genre" value="Thriller">Thriller<br>
+    <input type="checkbox" name="movie_genre" value="War">War<br>
+    <input type="checkbox" name="movie_genre" value="Western">Western<br>
+    <input type="submit" value='Search'  />
+    </form>

@@ -9,6 +9,12 @@
         <p>
             this is top 10
         </p>
+
+            <form class="search-box" method="post" action="<?php echo Config::get('URL');?>movie/toprated">
+            <label></label><input type="text" name="search" />
+            <input type="submit" value='Search' autocomplete="off" />
+            </form>
+
         </form>
         <table>
         	<thead>
