@@ -13,7 +13,7 @@
         <div>
             <table class="overview-table">
                 <thead>
-                <tr>
+                 <tr>
                     <td>Id</td>
                     <td>Avatar</td>
                     <td>Username</td>

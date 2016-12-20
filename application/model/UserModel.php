@@ -14,7 +14,7 @@ class UserModel
      * @see http://davidwalsh.name/php-shorthand-if-else-ternary-operators
      *
      * @return array The profiles of all users
-     */
+      */
     public static function getPublicProfilesOfAllUsers()
     {
         $database = DatabaseFactory::getFactory()->getConnection();

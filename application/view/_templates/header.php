@@ -12,7 +12,7 @@
 <body>
     <!-- wrapper, to center website -->
     <div class="wrapper">
-
+ 
         <!-- navigation -->
         <ul class="navigation">
             <li <?php if (View::checkForActiveController($filename, "index")) { echo ' class="active" '; } ?> >

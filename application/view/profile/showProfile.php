@@ -1,4 +1,4 @@
-<div class="container">
+  <div class="container">
     <h1>ProfileController/showProfile/:id</h1>
     <div class="box">
 
