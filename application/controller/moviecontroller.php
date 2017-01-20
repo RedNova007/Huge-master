@@ -17,11 +17,8 @@
     'movies' => MovieModel::getallmovies_toprated(Request::post('search'))
     ));		
     }
-    
-    public function search()
-    {
      
-    }
+    
     public function movieindex($movie_id)
     {
     if (isset($movie_id)) {
